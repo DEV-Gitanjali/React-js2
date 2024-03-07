@@ -19,6 +19,9 @@ import React, { useState }  from "react";
 
 
 function App() {
+
+  // beginner level usestate
+  
   // const [score, setscore] = useState(100);
 
   // const [banned, setbanned] = useState(false);
@@ -35,14 +38,29 @@ function App() {
   //   </div>
   // )
 
-  const [val,setVal]=useState(12);
+// intermediate level
+  // const [val,setVal]=useState(12);
 
-  return (
-    <div className='p-4'>
-       <h1>{val}</h1>
-       <button onClick={()=>setVal((prev)=>prev+1)} className='px-3 py-1 bg-blue-400 rounded-full'>change karo</button>
-    </div>
-  )
+  // return (
+  //   <div className='p-4'>
+  //      <h1>{val}</h1>
+  //      <button onClick={()=>setVal((prev)=>prev+1)} className='px-3 py-1 bg-blue-400 rounded-full'>change karo</button>
+  //   </div>
+  // )
+
+
+  // advanced level
+
+  const [val,setVal]=useState({name:"subham" , isBanned:false});
+return(
+  <div className='p-4 '>
+    <h1>name:{val.name}</h1>
+    <h1>banned:{val.isBanned.toString()}</h1>
+    <button onClick = {()=>setVal({...val, isBanned:!val.isBanned})} className={`px-3 py-1 ${ val.isBanned ? "bg-blue-500" : "bg-red-500"} rounded-full text-white`}>change</button>
+
+  </div>
+)
+
 }
 
 export default App
