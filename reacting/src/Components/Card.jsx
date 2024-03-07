@@ -30,6 +30,7 @@ function Card() {
             <div className='w-full px-3 py-4'>
               <h2 className='font-semibold'>{elem.name}</h2>
               <p className='px-5 py-2'>{elem.description}</p>
+              <button className="px-4 py-1 bg-blue-600 text-xs rounded text-zinc-100">Know More</button>
             </div>
           </div>
         </div>
