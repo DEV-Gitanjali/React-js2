@@ -106,6 +106,22 @@ function App() {
 //     </button>
 //   </div>
 // );
+const [val, setVal] = useState([1, 2, 3, 4, 5, 6, 7]);
+
+return (
+  <div className='p-5'>
+    {val.map((item) => (
+      <h1 key={item}>{item}</h1>
+    ))}
+
+    <button
+      onClick={() => setVal([...val, 7])}
+      className='px-3 py-1 bg-blue-500 rounded-full text-white'
+    >
+      click
+    </button>
+  </div>
+);
 
 
 
