@@ -5,10 +5,13 @@ import Card from "./Components/Card";
 
 
 function App(){
+
+  const data =["sybham" , "bidrohi" , "chiku"];
+
   return(
     <div>
-   <Card/>
-      
+     {data.map(()=><h1>hey</h1>)}
+       
     </div>
   );
 }
