@@ -106,26 +106,49 @@ function App() {
 //     </button>
 //   </div>
 // );
-const [val, setVal] = useState([1, 2, 3, 4, 5, 6, 7]);
+// const [val, setVal] = useState([1, 2, 3, 4, 5, 6, 7]);
 
-return (
-  <div className='p-5'>
-    {val.map((item) => (
-      <h1 key={item}>{item}</h1>
-    ))}
+// return (
+//   <div className='p-5'>
+//     {val.map((item) => (
+//       <h1 key={item}>{item}</h1>
+//     ))}
 
-    <button
-      onClick={() => setVal([...val, 7])}
-      className='px-3 py-1 bg-blue-500 rounded-full text-white'
-    >
-      click
-    </button>
-  </div>
-);
-
-
+//     <button
+//       onClick={() => setVal([...val, 7])}
+//       className='px-3 py-1 bg-blue-500 rounded-full text-white'
+//     >
+//       click
+//     </button>
+//   </div>
+// );
 
 
+// const [val, setVal] = useState([ 
+
+//   {name:"shima" , age:20} ,
+//  {name:"bidrohi" ,age: 22} ,
+//   { name:"subham" , age:22}]);
+
+
+//   return (
+//     <div className="p-5">
+//   {val.map((item) => (
+//     <div key={item.name}>
+//       <h1>{item.name}</h1>
+//       <h1>{item.age}</h1>
+//     </div>
+//   ))}
+// </div>
+
+
+//       <button 
+//       onClick={()=> setVal(()=> val.map(item=> item.name==="shivam" ? {name:"shivam" , age:20} : item.name))}
+//       className="px-2 py-1 text-white rounded-full bg-blue-500">click</button>
+//     </div>
+  
+
+// )
 
 }
 
