@@ -1,24 +1,26 @@
-import React, { useState }  from "react";
-// import Card from "./Components/Card";
+// import React, { useState }  from "react";
+import React from "react";
+
+import Card from "./Components/Card";
 
 
 
 
-// function App(){
+function App(){
 
 
-//   return(
-//     <>
-//       {/* <Card/> */}
+  return(
+    <>
+      <Card/>
        
-//     </>
-//   );
-// }
-// export default App;
+    </>
+  );
+}
+export default App;
 
 
 
-function App() {
+// function App() {
 
   // beginner level usestate
   
@@ -150,6 +152,7 @@ function App() {
 
 // )
 
-}
+// }
 
-export default App
+// export default App
+
