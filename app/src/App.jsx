@@ -1,4 +1,4 @@
-import React from 'react' ;
+import React from 'react';
 import Card from './Components/Card';
 
 function App() {
@@ -10,9 +10,11 @@ function App() {
   ];
 
   return (
-    <>
-      <Card/>
-    </>
+    <div className='w-full h-screen bg-zinc-300 flex gap-4 items-center justify-center'>
+      {data.map((item, index) => (
+        <Card key={index} image={item.image} />
+      ))}
+    </div>
   );
 }
 
