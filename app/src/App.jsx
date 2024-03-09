@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react' ;
 import Card from './Components/Card';
 
 function App() {
@@ -8,13 +8,17 @@ function App() {
     { name: "Rahul", profession: "Artist", image: "https://images.unsplash.com/photo-1628359355624-855775b5c9c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Rabi", profession: "Dancer", image: "https://plus.unsplash.com/premium_photo-1682089706055-d5ef14dc14e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFuY2VyfGVufDB8fDB8fHww" },
   ];
+  return(
+    <>
+    <div className='w-full h-screen bg-zinc-300  flex gap-4 items-center justify-center'>
 
-  return (
-    <div className='w-full h-screen bg-zinc-300 flex gap-4 items-center justify-center'>
-      {data.map((item, index) => (
-        <Card key={index} image={item.image} />
+      {data.map((item, index)=>(
+        
+      // <Card key={index} image ={item.image} name={item.name} profession={item.profession}/>))}
+      <Card  values = {item} />
       ))}
     </div>
+    </>
   );
 }
 
