@@ -3,8 +3,10 @@ import Card from './Card'
 
 function Cards() {
   return (
-    <div className='w-full h-[25vh]   p-4'>
+    <div className='w-full    p-4 flex justify-center gap-4 flex-wrap max-h-96 overflow-auto'>
+
    <Card/>
+  
     </div>
   )
 }
