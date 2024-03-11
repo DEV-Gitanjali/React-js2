@@ -6,20 +6,20 @@ const Nav = () => {
     <nav className='mt-10 flex justify-center gap-10'>
       <NavLink 
       style={(e)=>{
-        console.log(e);
+        
 
         return {
-            object:e.isActive?"tomato": "",
-        }
+            color:e.isActive?"tomato": "",
+            fontWeight:e.isActive? "bold" : "" ,
+        };
       }}
        to="/">Home</NavLink>
       <NavLink
       style={(e)=>{
-        console.log(e);
 
         return {
-            object:e.isActive?"tomato": "",
-        }
+            color:e.isActive?"tomato": "",
+        };
       }}
        to="/User">
         User</NavLink>
@@ -28,12 +28,13 @@ const Nav = () => {
 
       <NavLink 
 
-style={(e)=>{
-    console.log(e);
+className={(e)=>{
+    
 
-    return {
-        object:e.isActive?"tomato": "",
-    }
+    return [
+        e.isActive ? "text-red-200" : "",
+        e.isActive ? "text-bold" : "" ,
+    ].join(" ");
   }}
       
       to="/About">About</NavLink>
