@@ -1,13 +1,43 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
 
-const Nav=()=> {
+import { Link ,NavLink} from 'react-router-dom';
+
+const Nav = () => {
   return (
     <nav className='mt-10 flex justify-center gap-10'>
-        <Link to="/Home">Home</Link>
-        <Link to="/User">User</Link>
-        <Link to="/About">About</Link>
-      </nav>
+      <NavLink 
+      style={(e)=>{
+        console.log(e);
+
+        return {
+            object:e.isActive?"tomato": "",
+        }
+      }}
+       to="/">Home</NavLink>
+      <NavLink
+      style={(e)=>{
+        console.log(e);
+
+        return {
+            object:e.isActive?"tomato": "",
+        }
+      }}
+       to="/User">
+        User</NavLink>
+
+
+
+      <NavLink 
+
+style={(e)=>{
+    console.log(e);
+
+    return {
+        object:e.isActive?"tomato": "",
+    }
+  }}
+      
+      to="/About">About</NavLink>
+    </nav>
   );
 };
 
