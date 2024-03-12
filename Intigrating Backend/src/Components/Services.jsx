@@ -1,10 +1,35 @@
+import axios from '../Utils/axios';
 import React, { useEffect, useState } from 'react';
 
 const Services = () => {
   const [first, setFirst] = useState("this is normal data");
   const [second, setSecond] = useState("this is very large data");
 
+  
+
+  const getusers = () => {
+    
+    axios
+      .get("/users")
+      .then((users) => {
+        console.log(users);
+        // setUsers(users.data);
+      })
+      .catch((err) => console.log(err));
+  };
+
+
+
+
+
+
+
+
+
+
+
   useEffect(() => {
+    getusers();
     console.log("Services component is created");
 
     return () => {
