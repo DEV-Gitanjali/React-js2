@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export const Show = () => {
@@ -15,16 +15,13 @@ export const Show = () => {
       .catch((err) => console.log(err));
   };
 
+  useEffect(() => {
+    getProducts();
+  }, []);
+
   return (
     <>
-      <button
-        onClick={getProducts}
-        className="rounded px-5 py-2 bg-red-300"
-      >
-        Call product API
-      </button>
-      <hr />
-      <ul>
+      <ul className='p-10'>
         {products.length > 0 ? (
           products.map((p) => (
             <li key={p.id} className="rounded mb-2 p-5 bg-red-200">
